@@ -13,6 +13,7 @@ git "https://github.com/Kenem25/maven-web-application"
  stage('4UploadArtifacts'){
  sh "${mavenHome}/bin/mvn deploy"
  } 
+ /*
 stage('5deploy_uat'){
 deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'http://44.202.49.218:8080/')], contextPath: null, war: 'target/*war'
 }
@@ -29,4 +30,5 @@ emailext body: '''Build status for frontend application
 Regards,
 KCL''', recipientProviders: [developers()], subject: 'Build status', to: 'paypalteam@gmail.com'
 }
+*/
 }
